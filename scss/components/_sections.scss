@@ -1,0 +1,17 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .section__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    color: $title-text-color;
+    margin-bottom: 50px;
+  }
+
+  &--no-padding {
+    padding-top: 0;
+  }
+}

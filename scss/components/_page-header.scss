@@ -1,0 +1,12 @@
+.header {
+  border-bottom: 1px solid $header-border-color;
+
+  .header__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__logo {
+    margin-right: 93px;
+  }
+}

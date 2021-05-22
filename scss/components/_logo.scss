@@ -1,0 +1,17 @@
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.476;
+
+  .logo__first-part {
+    color: $accent-color;
+  }
+  .logo__second-part {
+    color: #000000;
+  }
+
+  .logo__second-part--inverse {
+    color: $text-color-on-dark;
+  }
+}
