@@ -6,6 +6,9 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+body.modal-open {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -17,11 +20,32 @@ p {
   margin-bottom: 0px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
-  width: 1200px;
+  // background-color: orange;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  width: 320px;
+
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .list-no-style {

@@ -1,12 +1,26 @@
 .header {
   border-bottom: 1px solid $header-border-color;
+  position: relative;
+
+  height: 60px;
+  display: flex;
+  align-items: center;
 
   .header__container {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .header__logo {
-    margin-right: 93px;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 }

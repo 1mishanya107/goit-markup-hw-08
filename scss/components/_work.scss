@@ -1,3 +1,10 @@
+.work {
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
+
 .work-list {
   display: flex;
   justify-content: space-between;
@@ -8,6 +15,7 @@
 
   .work-list__example {
     display: block;
+    max-width: 100%;
   }
 
   .work-list__label {

@@ -22,48 +22,94 @@
     <!--Шапка сайта-->
     <header class="header">
       <div class="header__container container">
-        <nav class="navigation">
+        <div class="header--mobile">
           <a class="header__logo logo link" href="./index.html"
             ><span class="logo__first-part">Web</span
             ><span class="logo__second-part">Studio</span></a
           >
-          <ul class="site-nav list-no-style">
-            <li class="site-nav__item">
-              <a class="site-nav__link link" href="./index.html">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a
-                class="site-nav__link site-nav__link--current link"
-                href="./portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="list-no-style contacts-list">
-          <li class="contacts-list__item">
-            <a
-              class="contacts-list__link link"
-              href="mailto:info@devstudio.com"
-            >
-              <svg class="contacts-list__icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts-list__item">
-            <a class="contacts-list__link link" href="tel:+380961111111">
-              <svg class="contacts-list__icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+
+          <button
+            type="button"
+            class="button mobile-menu__button"
+            data-menu-button
+          >
+            <svg class="menu-icon" width="24" height="16">
+              <use
+                class="icon-burger"
+                href="./images/icons.svg#icon-menu_24px"
+              ></use>
+              <use
+                class="icon-close"
+                href="./images/icons.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" data-menu>
+            <nav class="navigation">
+              <ul class="site-nav list-no-style">
+                <li class="site-nav__item">
+                  <a class="site-nav__link link" href="./index.html">Студия</a>
+                </li>
+                <li class="site-nav__item">
+                  <a
+                    class="site-nav__link site-nav__link--current link"
+                    href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a class="site-nav__link link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="list-no-style contacts-list">
+              <li class="contacts-list__item">
+                <a
+                  class="contacts-list__link link"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contacts-list__icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-list__item">
+                <a
+                  class="contacts-list__link link header-phone"
+                  href="tel:+380961111111"
+                >
+                  <svg class="contacts-list__icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="list-no-style header-social-net">
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://instagram.com">
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com">
+                  <span>Twitter</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://facebook.com">
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://linkedin.com">
+                  <span>Linkedin</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Основная информация -->
@@ -105,11 +151,38 @@
           <ul class="cards-list list-no-style">
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-1.jpg"
-                  alt="Ноутбук с открытой страницей сайта"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img1d-min.jpg   1x,
+                      ./images/portfolio/img1d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img1t-min.jpg   1x,
+                      ./images/portfolio/img1t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img1m-min.jpg   1x,
+                      ./images/portfolio/img1m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img1m-min.jpg"
+                    alt="Ноутбук с открытой страницей сайта"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -125,11 +198,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-2.jpg"
-                  alt="Два баскетболиста"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img2d-min.jpg   1x,
+                      ./images/portfolio/img2d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img2t-min.jpg   1x,
+                      ./images/portfolio/img2t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img2m-min.jpg   1x,
+                      ./images/portfolio/img2m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img2m-min.jpg"
+                    alt="Два баскетболиста"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -147,11 +247,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-3.jpg"
-                  alt="Логотип ресторана"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img3d-min.jpg   1x,
+                      ./images/portfolio/img3d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img3t-min.jpg   1x,
+                      ./images/portfolio/img3t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img3m-min.jpg   1x,
+                      ./images/portfolio/img3m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img3m-min.jpg"
+                    alt="Логотип ресторана"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -167,11 +294,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-4.jpg"
-                  alt="Наушники"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img4d-min.jpg   1x,
+                      ./images/portfolio/img4d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img4t-min.jpg   1x,
+                      ./images/portfolio/img4t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img4m-min.jpg   1x,
+                      ./images/portfolio/img4m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img4m-min.jpg"
+                    alt="Наушники"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -187,11 +341,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-5.jpg"
-                  alt="Две коробки"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img5d-min.jpg   1x,
+                      ./images/portfolio/img5d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img5t-min.jpg   1x,
+                      ./images/portfolio/img5t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img5m-min.jpg   1x,
+                      ./images/portfolio/img5m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img5m-min.jpg"
+                    alt="Две коробки"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -207,11 +388,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-6.jpg"
-                  alt="Монитор"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img6d-min.jpg   1x,
+                      ./images/portfolio/img6d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img6t-min.jpg   1x,
+                      ./images/portfolio/img6t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img6m-min.jpg   1x,
+                      ./images/portfolio/img6m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img6m-min.jpg"
+                    alt="Монитор"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -227,11 +435,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-7.jpg"
-                  alt="Открытый журнал"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img7d-min.jpg   1x,
+                      ./images/portfolio/img7d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img7t-min.jpg   1x,
+                      ./images/portfolio/img7t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img7m-min.jpg   1x,
+                      ./images/portfolio/img7m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img7m-min.jpg"
+                    alt="Открытый журнал"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -247,11 +482,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-8.jpg"
-                  alt="Бирка на веревочке"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img8d-min.jpg   1x,
+                      ./images/portfolio/img8d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img8t-min.jpg   1x,
+                      ./images/portfolio/img8t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img8m-min.jpg   1x,
+                      ./images/portfolio/img8m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img8m-min.jpg"
+                    alt="Бирка на веревочке"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -267,11 +529,38 @@
             </li>
             <li class="cards-list__item">
               <div class="thumb">
-                <img
-                  src="./images/portfolio/project-9.jpg"
-                  alt="Работа на ноутбуке"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/img9d-min.jpg   1x,
+                      ./images/portfolio/img9d2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img9t-min.jpg   1x,
+                      ./images/portfolio/img9t2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/img9m-min.jpg   1x,
+                      ./images/portfolio/img9m2x-min.jpg 2x
+                    "
+                    type="image/jpg"
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    class="cards-list__photo"
+                    src="./images/portfolio/img9m-min.jpg"
+                    alt="Работа на ноутбуке"
+                  />
+                </picture>
                 <div class="overlay-cards">
                   <p class="overlay-cards__text">
                     Технокряк это современная площадка распространения
@@ -387,5 +676,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
