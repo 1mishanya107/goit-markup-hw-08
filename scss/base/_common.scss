@@ -6,7 +6,9 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-body.modal-open {
+
+body.modal-open,
+body.menu-open {
   overflow: hidden;
 }
 h1,

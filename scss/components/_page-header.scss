@@ -2,9 +2,12 @@
   border-bottom: 1px solid $header-border-color;
   position: relative;
 
-  height: 60px;
   display: flex;
   align-items: center;
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 
   .header__container {
     @media screen and (min-width: 768px) {
