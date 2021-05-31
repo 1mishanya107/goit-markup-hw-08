@@ -6,8 +6,16 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  width: 450px;
-  height: 609px;
+
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+    max-height: 609px;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 528px;
@@ -22,14 +30,14 @@
     letter-spacing: 0.03em;
     color: $title-text-color;
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 26px;
   }
 
   .form__field {
     position: relative;
     // display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 
     &::placeholder {
       color: rgba(117, 117, 117, 0.5);
@@ -41,6 +49,17 @@
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: $primary-text-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-105%);
+
+    // &:hover,
+    // &:focus {
+    //   @media screen and (max-width: 767px) {
+    //     color: $accent-color;
+    //   }
+    // }
   }
 
   .form__input,
@@ -50,11 +69,18 @@
     padding: 10px 10px;
     border-radius: 4px;
     border: 1px solid $input-textarea-border;
-    width: 370px;
-    height: 40px;
     box-sizing: border-box;
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 479px) {
+      max-width: 370px;
+      max-height: 40px;
+    }
+
+    @media screen and (min-width: 480px) {
+      width: 370px;
+      height: 40px;
+    }
 
     &:focus,
     &:focus {
@@ -63,6 +89,9 @@
 
     &:focus + .form__icon {
       fill: $accent-color;
+    }
+    &:focus ~ .form__label {
+      color: $accent-color;
     }
 
     @media screen and (min-width: 1200px) {
@@ -78,8 +107,12 @@
   }
 
   .form__textarea {
-    min-height: 120px;
     resize: none;
+
+    min-height: 52px;
+    @media screen and (min-width: 480px) {
+      min-height: 120px;
+    }
   }
 
   .form__icon {
@@ -140,6 +173,7 @@
   }
 
   .agree__text-label {
+    // height: 24px;
     font-size: 12px;
     line-height: 1.17px;
 
@@ -151,6 +185,12 @@
     @media screen and (min-width: 1200px) {
       font-size: 14px;
       line-height: 1.71;
+    }
+
+    .agree__text--geometry {
+      @media screen and (max-width: 479px) {
+        height: 30px;
+      }
     }
   }
 

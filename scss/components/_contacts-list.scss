@@ -65,11 +65,13 @@
   .header-phone {
     @media screen and (max-width: 767px) {
       position: absolute;
-      top: -32px;
+      top: -50px;
       left: 0;
-      font-size: 34px;
       line-height: 1.18px;
       color: $accent-color;
+      @media screen and (min-width: 377px) {
+        font-size: 34px;
+      }
     }
   }
 

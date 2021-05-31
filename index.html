@@ -65,52 +65,55 @@
                 </li>
               </ul>
             </nav>
-            <ul class="list-no-style contacts-list">
-              <li class="contacts-list__item">
-                <a
-                  class="contacts-list__link link"
-                  href="mailto:info@devstudio.com"
-                >
-                  <svg class="contacts-list__icon" width="16" height="16">
-                    <use href="./images/icons.svg#icon-envelope"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
-              <li class="contacts-list__item">
-                <a
-                  class="contacts-list__link link header-phone"
-                  href="tel:+380961111111"
-                >
-                  <svg class="contacts-list__icon" width="16" height="16">
-                    <use href="./images/icons.svg#icon-smartphone"></use>
-                  </svg>
-                  +38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-            <ul class="list-no-style header-social-net">
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://instagram.com">
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://twitter.com">
-                  <span>Twitter</span>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://facebook.com">
-                  <span>Facebook</span>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com">
-                  <span>Linkedin</span>
-                </a>
-              </li>
-            </ul>
+
+            <div class="menu-geometry">
+              <ul class="list-no-style contacts-list">
+                <li class="contacts-list__item">
+                  <a
+                    class="contacts-list__link link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    <svg class="contacts-list__icon" width="16" height="16">
+                      <use href="./images/icons.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="contacts-list__item">
+                  <a
+                    class="contacts-list__link link header-phone"
+                    href="tel:+380961111111"
+                  >
+                    <svg class="contacts-list__icon" width="16" height="16">
+                      <use href="./images/icons.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+              <ul class="list-no-style header-social-net">
+                <li class="social-list__item">
+                  <a class="social-list__link" href="https://instagram.com">
+                    <span>Instagram</span>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="https://twitter.com">
+                    <span>Twitter</span>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="https://facebook.com">
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a class="social-list__link" href="https://linkedin.com">
+                    <span>Linkedin</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -692,37 +695,36 @@
         <form class="form js-speaker-form">
           <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
           <div class="form__field">
-            <label for="name" class="form__label">Имя</label>
             <input class="form__input" type="text" name="name" id="name" />
             <div class="form__icon">
               <svg width="12" height="12">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
+            <label for="name" class="form__label">Имя</label>
           </div>
 
           <div class="form__field">
-            <label for="tel" class="form__label">Телефон</label>
             <input class="form__input" type="tel" name="tel" id="tel" />
             <div class="form__icon">
               <svg width="12" height="12">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
+            <label for="tel" class="form__label">Телефон</label>
           </div>
 
           <div class="form__field">
-            <label for="mail" class="form__label">Почта</label>
             <input class="form__input" type="email" name="mail" id="mail" />
             <div class="form__icon">
               <svg width="12" height="12">
                 <use href="./images/icons.svg#icon-letter"></use>
               </svg>
             </div>
+            <label for="mail" class="form__label">Почта</label>
           </div>
 
           <div class="form__field">
-            <label for="comment" class="form__label">Комментарий</label>
             <textarea
               class="form__textarea"
               name="comment"
@@ -730,6 +732,7 @@
               rows="8"
               placeholder="Введите текст"
             ></textarea>
+            <label for="comment" class="form__label">Комментарий</label>
           </div>
 
           <div class="agree">
@@ -739,10 +742,12 @@
               name="policy"
               id="policy"
             />
-            <label class="agree__text-label" for="policy"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="agree__link" href="#">Условия договора</a></label
-            >
+            <label class="agree__text-label" for="policy">
+              <!-- <div class="agree__text--geometry"> -->
+              Соглашаюсь с рассылкой и принимаю
+              <a class="agree__link" href="#">Условия договора</a>
+              <!-- </div> -->
+            </label>
             <div class="agree__icon">
               <svg width="16" height="15">
                 <use href="./images/icons.svg#icon-check"></use>

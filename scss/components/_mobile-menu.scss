@@ -54,7 +54,9 @@
 .menu-container {
   z-index: 1;
   &.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     overflow-y: scroll;
   }
