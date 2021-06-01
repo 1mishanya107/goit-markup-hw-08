@@ -1395,6 +1395,7 @@ img {
 }
 .form .form__textarea {
   resize: none;
+  min-width: 213px;
   min-height: 52px;
 }
 @media screen and (min-width: 480px) {
@@ -1473,22 +1474,14 @@ img {
   }
 }
 .agree .agree__text-label {
+  display: block;
   font-size: 12px;
-  line-height: 1.17px;
-  letter-spacing: 0.03em;
-  letter-spacing: 0.03em;
   color: #757575;
-  padding-left: 25px;
+  padding-left: 24px;
 }
 @media screen and (min-width: 1200px) {
   .agree .agree__text-label {
     font-size: 14px;
-    line-height: 1.71;
-  }
-}
-@media screen and (max-width: 479px) {
-  .agree .agree__text-label .agree__text--geometry {
-    height: 30px;
   }
 }
 .agree .agree__link {

@@ -108,7 +108,7 @@
 
   .form__textarea {
     resize: none;
-
+    min-width: 213px;
     min-height: 52px;
     @media screen and (min-width: 480px) {
       min-height: 120px;
@@ -173,25 +173,21 @@
   }
 
   .agree__text-label {
-    // height: 24px;
+    display: block;
     font-size: 12px;
-    line-height: 1.17px;
 
-    letter-spacing: 0.03em;
-    letter-spacing: 0.03em;
     color: $primary-text-color;
-    padding-left: 25px;
+    padding-left: 24px;
 
     @media screen and (min-width: 1200px) {
       font-size: 14px;
-      line-height: 1.71;
     }
 
-    .agree__text--geometry {
-      @media screen and (max-width: 479px) {
-        height: 30px;
-      }
-    }
+    //     .agree__text--geometry {
+    //       @media screen and (max-width: 479px) {
+    //         // height: 30px;
+    //       }
+    //     }
   }
 
   .agree__link {
